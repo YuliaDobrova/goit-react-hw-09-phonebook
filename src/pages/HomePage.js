@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { getIsAuthenticated } from "../redux/auth/authSelectors";
 
 const HomePage = () => {
+  const isAuthenticated = useSelector(getIsAuthenticated);
   return (
     <>
       <h2>Personal Phonebook</h2>
@@ -10,10 +13,17 @@ const HomePage = () => {
       <p>Please login or register to continue. </p>
       <p>
         If you are authorized, you can go to your
-        <NavLink to="/contacts" exact className="contactsNavLink">
-          {" "}
-          contacts
-        </NavLink>
+        {isAuthenticated ? (
+          <NavLink to="/contacts" exact className="contactsNavLink">
+            {" "}
+            contacts
+          </NavLink>
+        ) : (
+          <NavLink to="/login" exact className="contactsNavLink">
+            {" "}
+            contacts
+          </NavLink>
+        )}
         . 📘
       </p>
     </>
