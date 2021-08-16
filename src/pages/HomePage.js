@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -7,6 +8,14 @@ const HomePage = () => {
       <br />
       <p>An application that won't let you forget an important info. 🤗 </p>
       <p>Please login or register to continue. </p>
+      <p>
+        If you are authorized, you can go to your
+        <NavLink to="/contacts" exact className="contactsNavLink">
+          {" "}
+          contacts
+        </NavLink>
+        . 📘
+      </p>
     </>
   );
 };

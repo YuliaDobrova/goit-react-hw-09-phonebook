@@ -13,6 +13,10 @@ export const AuthNavigationContainer = styled.nav`
     font-weight: 700;
     color: white;
   }
+  .navLink:hover,
+  .navLink:focus {
+    color: turquoise;
+  }
   .navLinkActive {
     color: turquoise;
   }

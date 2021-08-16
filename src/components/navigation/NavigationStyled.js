@@ -5,6 +5,7 @@ export const NavigationContainer = styled.nav`
     display: flex;
     justify-content: flex-end;
   }
+
   .navListItem:not(:first-child) {
     padding-top: 20px;
   }
@@ -16,16 +17,24 @@ export const NavigationContainer = styled.nav`
     font-weight: 700;
     color: white;
   }
+  .navLink:hover,
+  .navLink:focus {
+    color: turquoise;
+  }
   .navLinkActive {
     color: turquoise;
   }
+  /* .navLink.navLinkActive {
+    fill: turquoise;
+  } */
   .navLink__icon {
     width: 30px;
     height: 60px;
-    fill: white;
+    fill: turquoise;
   }
+
   .navLink__icon:hover,
   .navLink__icon:focus {
-    fill: turquoise;
+    fill: white;
   }
 `;

@@ -18,20 +18,20 @@ const withNotification = (WrappedComponent) => {
       return () => {
         dispatch(resetError());
       };
-    }, []);
+    }, [dispatch]);
 
     return <WrappedComponent {...props} />;
   };
 };
 
-{
-  /* <WrappedComponent/> */
-}
+// {
+//   /* <WrappedComponent/> */
+// }
 const Wrapper = () => {
   return <h2>Wrapper</h2>;
 };
-
-const NewWrapper = withNotification(Wrapper);
+// const NewWrapper = withNotification(Wrapper);
+withNotification(Wrapper);
 
 export default withNotification;
 
